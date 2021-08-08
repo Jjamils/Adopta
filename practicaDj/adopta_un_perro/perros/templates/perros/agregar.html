@@ -1,0 +1,46 @@
+{% extends 'perros/layout.html' %}
+
+
+{% block content %}
+
+
+<div class="container text-center">
+  <form method="POST">
+    <div class="container text-center">
+    <table class="table table-striped table-dark">
+      <tr>
+        <td>
+          {% csrf_token %}
+          <div class="form-group">
+            {{form}}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input class="btn btn-primary btn-sm" type="submit" value="Registrar mascota">
+        </td>
+      </tr>
+    </table>
+  </div>
+  </form>
+</div>
+
+{% endblock %}
+
+<!--  <form action="" method="POST">
+    <table>
+      <tr>
+        <td>
+          {% csrf_token %}
+          {{form}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" value="Registrar mascota">
+        </td>
+      </tr>
+    </table>
+  </form>
+-->
